@@ -114,9 +114,9 @@ Things you may want to cover:
 | --------------- | ---------- | ------------------------------ |
 | name            | string     | null: false                    |
 | genre           | integer    | null: false                    |
-| itroduction     | text       | null: false                    |
-| place           | text       | null: false                    |
-| other           | text       | null: false                    |
+| introduction    | text       | null: false                    |
+| place           | text       |                                |
+| other           | text       |                                |
 
 ### Association
 
