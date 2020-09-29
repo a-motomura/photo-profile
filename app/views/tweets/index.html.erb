@@ -6,3 +6,17 @@
     <%= link_to "新規登録", new_user_registration_path %>
     <%= link_to "ログイン", new_user_session_path %>
   <% end %>
+
+  <% @tweets.each do |tweet| %>
+    <div class="tweet-post">
+      <%#= link_to _path(tweet) do %>
+      <div class='tweet-img-content'>
+        <%#= image_tag tweet.image, class: "tweet-img" %>
+        <div class='tweet-info'>
+          <h3 class='tweet-name'>
+            <%#= item.name %>
+          </h3>
+        </div>
+      </div>
+    </div>
+  <% end %>
