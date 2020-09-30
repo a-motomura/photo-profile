@@ -6,4 +6,10 @@ class TweetsController < ApplicationController
   def new
     @tweet = Tweet.new
   end
+
+  private
+
+  def tweet_params
+    params.require(:tweet).permit(:image)
+  end
 end

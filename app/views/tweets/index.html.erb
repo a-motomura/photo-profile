@@ -11,7 +11,7 @@
     <div class="tweet-post">
       <%#= link_to _path(tweet) do %>
       <div class='tweet-img-content'>
-        <%#= image_tag tweet.image, class: "tweet-img" %>
+        <%= image_tag tweet.image.variant(resize:'500x500'), class: "tweet-img" %>
         <div class='tweet-info'>
           <h3 class='tweet-name'>
             <%#= item.name %>
