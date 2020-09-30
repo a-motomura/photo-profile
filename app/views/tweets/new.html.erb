@@ -22,12 +22,18 @@
       </div>
       <%= f.text_area :name, class:"tweets-text", id:"tweets-name", placeholder:"写真の名前（必須 20文字まで)", maxlength:"20" %>
       
-      <div class="weight-bold-text">
-        ジャンル
-        <span class="indispensable">必須</span>
+      <div class="items-detail">
+        <div class="weight-bold-text">
+          <div class="form">
+            <div class="weight-bold-text">
+              写真のジャンル
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"tweet-genre"}) %>
+          </div>
+        </div>
       </div>
-      <%#= f.collection_select(:status_id, #Genre.all, :id, :genre, {}, {class:"select-box", id:"tweet-genre"}) %>
-      
+
       <div class="weight-bold-text">
         写真の説明
         <span class="indispensable">必須</span>
