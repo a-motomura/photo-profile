@@ -12,5 +12,5 @@ class Tweet < ApplicationRecord
   validates :introduction, length: { maximum: 100 }
   validates :place, length: { maximum: 50 }
   validates :other, length: { maximum: 100 }
-  validates :genre_id, numericality: { other_than: 0, message: "can't be blank" }
+  validates :genre_id, numericality: { other_than: 0, message: 'を選択してください' }
 end
