@@ -117,6 +117,7 @@ Things you may want to cover:
 | introduction    | text       | null: false                    |
 | place           | text       |                                |
 | other           | text       |                                |
+| user            | references | null: false, foreign_key: true |
 
 ### Association
 
