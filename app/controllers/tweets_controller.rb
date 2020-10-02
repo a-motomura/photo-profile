@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:show, :edit, :update]
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   def index
     @tweets = Tweet.all.order("created_at DESC")
@@ -30,6 +30,14 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
     if @tweet.update(tweet_params)
       redirect_to tweet_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @tweet.destroy
+      redirect_to root_path
     else
       render :edit
     end
