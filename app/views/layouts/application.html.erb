@@ -14,7 +14,7 @@
       <div class="header__bar row">
       <h1 class="grid-6"><a href="/">PhotoProfile</a></h1>
         <% if user_signed_in? %>
-          <%= link_to current_user.nickname, "#", class: "user-nickname"%>
+          <%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname"%>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
         <% else %>
           <%= link_to "新規登録", new_user_registration_path %>

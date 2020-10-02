@@ -1,0 +1,12 @@
+<div class="contents row">
+  <p><%= @nickname %>さんのアルバム</p>
+  <% @tweets.each do |tweet| %>
+    <%= link_to tweet_path(tweet) do %>
+      <p><%= tweet.name %></p>
+      <%= image_tag tweet.image, class:"tweet-box-img" %>
+      <p>
+        <span class="name"><%= tweet.introduction %></span>
+      </p>
+    <% end %>
+  <% end %>
+</div>
