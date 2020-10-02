@@ -1,0 +1,38 @@
+<div class="tweet-show">
+  <div class="tweet-box">
+    <h2 class="name">
+      <%= @tweet.name %>
+    </h2>
+
+
+    <div class='tweet-img-content'>
+      <%= image_tag @tweet.image, class:"tweet-box-img" %>
+      <div class="tweet-explain-box">
+        <span><%= @tweet.introduction %></span>
+      </div>
+      <%= link_to '写真の編集', edit_tweet_path(@tweet), method: :get, class: "tweet-red-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除', tweet_path(@tweet), method: :delete, class:'tweet-destroy' %>
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-tweet">投稿者</th>
+          <td class="detail-value"><%= @tweet.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-tweet">ジャンル</th>
+          <td class="detail-value"><%= @tweet.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">写真の場所</th>
+          <td class="detail-value"><%= @tweet.place %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">写真のその他概要</th>
+          <td class="detail-value"><%= @tweet.other %></td>
+      </tbody>
+    </table>
+  </div>
+</div>
