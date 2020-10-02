@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>投稿ページ</h3>
+  <h3>編集ページ</h3>
   <%= form_with model: @tweet, local: true do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
     <div class="img-upload">
@@ -54,8 +54,8 @@
     <%= f.text_area :other, class:"tweet-text", id:"tweet-other", placeholder:"写真のその他概要（必須 1,00文字まで）（写真を撮影した時の状況や近くに何があったかなど）例）近くにJR最南端の駅があったと思います。" ,rows:"7" ,maxlength:"1000" %>
   
     <div class="sell-btn-contents">
-      <%= f.submit "投稿する", class:"tweet-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%= f.submit "編集する", class:"tweet-btn" %>
+      <%=link_to 'もどる', tweet_path, class:"back-btn" %>
     </div>
   <% end %>
 </div>

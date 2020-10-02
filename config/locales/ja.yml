@@ -1,0 +1,12 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       input both letters and numbers.: 半角英数字
+     tweet:
+       image: 写真
+       name: 写真の名前
+       introduction: 写真の説明
+       place: 写真の場所
+       genre_id: ジャンル
