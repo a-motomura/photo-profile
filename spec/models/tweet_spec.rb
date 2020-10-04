@@ -23,31 +23,37 @@ describe Tweet do
       it 'imageが空では登録できないこと' do
         @tweet.image = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Image can't be blank")
+        expect(@tweet.errors.full_messages).to include("写真を入力してください")
       end
 
       it 'nameが空では登録できないこと' do
         @tweet.name = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Name can't be blank")
+        expect(@tweet.errors.full_messages).to include("写真の名前を入力してください")
       end
 
       it 'genreを選択していないと保存できないこと' do
         @tweet.genre_id = 0
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Genre can't be blank")
+        expect(@tweet.errors.full_messages).to include("ジャンルを選択してください")
       end
 
       it 'introductionが空では登録できないこと' do
         @tweet.introduction = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Introduction can't be blank")
+        expect(@tweet.errors.full_messages).to include("写真の説明を入力してください")
       end
 
       it 'priceが空では登録できないこと' do
         @tweet.place = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Place can't be blank")
+        expect(@tweet.errors.full_messages).to include("写真の場所を入力してください")
+      end
+
+      it 'ユーザーが紐付いていないと登録できないこと' do
+        @tweet.user = nil
+        @tweet.valid?
+        expect(@tweet.errors.full_messages).to include("Userを入力してください")
       end
     end
   end
