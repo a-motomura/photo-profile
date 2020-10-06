@@ -1,5 +1,10 @@
 <div class="tweet-show">
   <div class="tweet-box">
+    <% if user_signed_in? && current_user.id == @tweet.user_id %>
+      <%= link_to '写真の編集', edit_tweet_path(@tweet), method: :get, class: "tweet-blue-btn" %>
+      <p class='or-text'>＊注意！一度削除した投稿は元に戻せません＊</p>
+      <%= link_to '削除', tweet_path(@tweet), method: :delete, class:'tweet-destroy' %>
+    <% end %>
     <h2 class="name">
       <%= @tweet.name %>
     </h2>
@@ -9,11 +14,6 @@
       <div class="tweet-explain-box">
         <span><%= @tweet.introduction %></span>
       </div>
-      <% if user_signed_in? && current_user.id == @tweet.user_id %>
-        <%= link_to '写真の編集', edit_tweet_path(@tweet), method: :get, class: "tweet-red-btn" %>
-        <p class='or-text'>or</p>
-        <%= link_to '削除', tweet_path(@tweet), method: :delete, class:'tweet-destroy' %>
-      <% end %>
     </div>
 
     <table class="detail-table">
@@ -27,19 +27,21 @@
           <td class="detail-value"><%= @tweet.genre.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">写真の場所</th>
+          <th class="detail-tweet">場所</th>
           <td class="detail-value"><%= @tweet.place %></td>
         </tr>
         <tr>
-          <th class="detail-item">写真のその他概要</th>
+          <th class="detail-tweet">その他</th>
           <td class="detail-value"><%= @tweet.other %></td>
       </tbody>
     </table>
     <div class="container">
       <% if current_user %>
         <%= form_with(model: [@tweet, @comment], local: true) do |form|%>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-          <%= form.submit "コメントする" %>
+          <div class="comment-text">
+            <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+          </div>
+          <p class="comment-btn"><%= form.submit "コメントする" %></p>
         <% end %>
       <% else %>
         <strong><p>*** コメントの投稿には新規登録/ログインが必要です ***</p></strong>
