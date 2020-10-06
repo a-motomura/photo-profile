@@ -1,0 +1,24 @@
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5vh 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  padding: 5vh 0;
+}

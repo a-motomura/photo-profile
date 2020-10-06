@@ -4,26 +4,28 @@
     <title>PhotoProfile</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <header class="header">
-      <div class="header__bar row">
-      <h1 class="grid-6"><a href="/">PhotoProfile</a></h1>
-        <% if user_signed_in? %>
-          <%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname"%>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
-        <% else %>
-          <%= link_to "新規登録", new_user_registration_path %>
-          <%= link_to "ログイン", new_user_session_path %>
-        <% end %>
+      <div class="header_bar row">
+      <h1 class="grid-6"><a class="pagetitle" href="/">PhotoProfile</a></h1>
+      <ul class='lists'>
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname"%></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+          <% else %>
+            <li><%= link_to "新規登録", new_user_registration_path, class: "login" %></li>
+            <li><%= link_to "ログイン", new_user_session_path, class: "sign-up" %></li>
+          <% end %>
+        </ul>
       </div>
     </header>
     <%= yield %>
-    <footer>
+    <footer class="footer">
       <p>
         PhotoProfile
       </p>
