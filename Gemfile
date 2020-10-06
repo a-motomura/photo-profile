@@ -65,3 +65,7 @@ gem 'image_processing', '~> 1.2'
 gem 'active_hash'
 gem 'pry-rails'
 gem 'rails-i18n'
+
+group :production do
+ gem 'rails_12factor'
+end
