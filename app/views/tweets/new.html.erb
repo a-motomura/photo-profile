@@ -19,9 +19,9 @@
       写真の名前
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :name, class:"tweets-text", id:"tweets-name", placeholder:"写真の名前（必須 20文字まで)", maxlength:"20" %>
+    <%= f.text_area :name, class:"tweets-text-name", id:"tweets-name", placeholder:"写真の名前（必須 20文字まで)", maxlength:"20" %>
     
-    <div class="items-detail">
+    <div class="tweet-detail">
       <div class="weight-bold-text">
         <div class="form">
           <div class="weight-bold-text">
@@ -37,25 +37,25 @@
       写真の説明
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :introduction, class:"tweet-text", id:"tweet-introduction", placeholder:"写真の説明（必須 1,00文字まで）（どんな場所で撮影した写真か、不明な点はないかなど）例）2010年頃に鹿児島で撮影した写真です。山を撮影した写真なのですが、名前と詳しい場所が分かりません。分かる方がいたらコメントお願いします。" ,rows:"7" ,maxlength:"1000" %>
+    <%= f.text_area :introduction, class:"tweets-text-introduction", id:"tweet-introduction", placeholder:"写真の説明（必須 1,00文字まで）（どんな場所で撮影した写真か、不明な点はないかなど）例）2010年頃に鹿児島で撮影した写真です。山を撮影した写真なのですが、名前と詳しい場所が分かりません。分かる方がいたらコメントお願いします。" ,rows:"7" ,maxlength:"1000" %>
   
 
     <div class="weight-bold-text">
       写真の場所
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :place, class:"tweets-text", id:"tweets-place", placeholder:"写真の場所（必須 50文字まで) 例)鹿児島県の南さつま市のどこかの山です", maxlength:"50" %>
+    <%= f.text_area :place, class:"tweets-text-place", id:"tweets-place", placeholder:"写真の場所（必須 50文字まで) 例)鹿児島県の南さつま市のどこかの山です", maxlength:"50" %>
 
           
     <div class="weight-bold-text">
-      写真のその他概要
-      <span class="indispensable">必須</span>
+      その他
+      <span class="other">(任意)</span>
     </div>
-    <%= f.text_area :other, class:"tweet-text", id:"tweet-other", placeholder:"写真のその他概要（必須 1,00文字まで）（写真を撮影した時の状況や近くに何があったかなど）例）近くにJR最南端の駅があったと思います。" ,rows:"7" ,maxlength:"1000" %>
+    <%= f.text_area :other, class:"tweets-text-other", id:"tweet-other", placeholder:"その他（必須 1,00文字まで）（写真を撮影した時の状況や近くに何があったかなど）例）近くにJR最南端の駅があったと思います。" ,rows:"7" ,maxlength:"1000" %>
   
     <div class="sell-btn-contents">
       <%= f.submit "投稿する", class:"tweet-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
   <% end %>
 </div>

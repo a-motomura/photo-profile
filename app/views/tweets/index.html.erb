@@ -5,22 +5,28 @@
     </div> 
   <% end %>
 
-  <%= link_to '新規投稿写真', "/tweets/new", class: "subtitle" %>
-  <ul class='item-lists'>
-    <% @tweets.each do |tweet| %>
-      <div class="tweet-post">
-        <%= link_to tweet_path(tweet) do %>
-          <div class='tweet-img-content'>
-            <%= image_tag tweet.image.variant(resize:'500x500'), class: "tweet-image" %>
-            <div class='tweet-info'>
-              <h3 class='tweet-name'>
-                <%= tweet.name %>
-              </h3>
-            </div>
+  <div class='item-contents'>
+    <%= link_to '新規投稿写真', "/tweets/new", class: "subtitle" %>
+    <ul class='tweet-lists'>
+      <% @tweets.each do |tweet| %>
+        <li class='list'>
+          <div class="tweet-post">
+            <%= link_to tweet_path(tweet) do %>
+              <div class='tweet-img-content'>
+                <div class='tweet-info'>
+                  <h3 class='tweet-name'>
+                    <div class:="tweets-name">
+                      <%= tweet.name %>
+                    </div>
+                  </h3>
+                </div>
+                <%= image_tag tweet.image.variant(resize:'500x500'), class: "tweet-image" %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
-      </div>
-    <% end %>
-  </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 

@@ -2,7 +2,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-  
+
   <div class="field">
     <%= f.label "ニックネーム" %><br />
     <%= f.text_field :nickname %>
@@ -30,5 +30,3 @@
     <%= f.submit "新規登録" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
