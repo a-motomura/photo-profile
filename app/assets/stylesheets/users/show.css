@@ -1,0 +1,25 @@
+.myroom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  background-color: lightgreen;
+}
+
+.my-tweet-lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 10px;
+}
+
+.tweet-info {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}

@@ -1,12 +1,19 @@
 <div class="contents row">
-  <p><%= @nickname %>さんのアルバム</p>
-  <% @tweets.each do |tweet| %>
-    <%= link_to tweet_path(tweet) do %>
-      <p><%= tweet.name %></p>
-      <%= image_tag tweet.image, class:"tweet-box-img" %>
-      <p>
-        <span class="name"><%= tweet.introduction %></span>
-      </p>
-    <% end %>
-  <% end %>
+  <div class="user_nav grid-6">
+    <div class="myroom">
+      <p><%= @nickname %>さんのアルバム</p>
+    </div>
+    <ul class='my-tweet-lists'>
+      <% @tweets.each do |tweet| %>
+        <div class="tweet-post">
+          <%= link_to tweet_path(tweet) do %>
+            <div class='tweet-info'>
+              <p><%= tweet.name %></p>
+            </div>
+            <%= image_tag tweet.image.variant(resize:'500x500'), class: "tweet-image" %>
+          <% end %>
+        </div>
+      <% end %>
+    </ul>
+  </div>
 </div>

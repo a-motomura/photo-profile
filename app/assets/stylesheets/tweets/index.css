@@ -1,5 +1,4 @@
 
-
 .user_nav.grid-6 {
   margin: auto;
 }
@@ -12,7 +11,7 @@
   color: white;
   background-color: blue;
   padding: 20px;
-  margin: 3% 45%;
+  margin: 3% 40%;
 }
 
 a {
@@ -50,6 +49,6 @@ a {
 }
 
 .tweet-image {
-  width: 60vh;
-  height: 60vh;
+  width: 33vh;
+  height: 33vh;
 }
