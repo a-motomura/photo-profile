@@ -1,32 +1,42 @@
 <div class='main'>
-  <% if user_signed_in? %>
-    <div class="user_nav grid-6">
-      <a class="post" href="/tweets/new">投稿する</a>
-    </div> 
-  <% end %>
-
-  <div class='item-contents'>
-    <%= link_to '新規投稿写真', "/tweets/new", class: "subtitle" %>
-    <ul class='tweet-lists'>
-      <% @tweets.each do |tweet| %>
-        <li class='list'>
-          <div class="tweet-post">
-            <%= link_to tweet_path(tweet) do %>
-              <div class='tweet-img-content'>
-                <div class='tweet-info'>
-                  <h3 class='tweet-name'>
-                    <div class:="tweets-name">
-                      <%= tweet.name %>
-                    </div>
-                  </h3>
-                </div>
-                <%= image_tag tweet.image.variant(resize:'500x500'), class: "tweet-image" %>
-              </div>
-            <% end %>
-          </div>
-        </li>
-      <% end %>
-    </ul>
+  <div class="tweet-text">
+      <h3>PhotoProfileに写真を投稿してみよう！</h3>
+      <div class="tweet-text2">
+        <ul class="ul-text">
+          <li>自分で撮影した写真の中でどこで撮ったのか、何を撮ったのか分からない写真はありませんか？</li>
+          <li>そんな写真を投稿して、他のユーザーにコメントをもらって写真のプロフィールを明らかにしましょう</li>
+        </ul>
+      </div>
   </div>
+
+
+      <%= link_to '新規投稿写真', "/tweets/new", class: "subtitle" %>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <a class="post" href="/tweets/new">投稿する</a>
+          </div> 
+        <% end %>
+    <div class='tweet-contents'>
+      <ul class='tweet-lists'>
+        <% @tweets.each do |tweet| %>
+          <li class='list'>
+            <div class="tweet-post">
+              <%= link_to tweet_path(tweet) do %>
+                <div class='tweet-img-content'>
+                  <div class='tweet-info'>
+                    <h3 class='tweet-name'>
+                      <div class:="tweets-name">
+                        <%= tweet.name %>
+                      </div>
+                    </h3>
+                  </div>
+                  <%= image_tag tweet.image.variant(resize:'500x500'), class: "tweet-image" %>
+                </div>
+              <% end %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
 </div>
 

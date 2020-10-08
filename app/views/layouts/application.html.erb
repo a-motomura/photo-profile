@@ -4,7 +4,7 @@
     <title>PhotoProfile</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-  
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,8 +12,12 @@
   <body>
     <header class="header">
       <div class="header_bar row">
-      <h1 class="grid-6"><a class="pagetitle" href="/">PhotoProfile</a></h1>
-      <ul class='lists'>
+          <div class="title">
+          <h1 class="grid-6"><a class="pagetitle" href="/">PhotoProfile</a></h1>
+        </div>
+      </div>
+      <div class="navbar">
+        <ul class='nav-lists'>
           <% if user_signed_in? %>
             <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname"%></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
