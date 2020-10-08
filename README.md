@@ -32,7 +32,7 @@ Things you may want to cover:
 # URL	
 デプロイ済みのURLを記述しましょう。デプロイが済んでいない場合は、デプロイ次第記述しましょう。
 
-[オリジナルアプリ](https://photo-profile.herokuapp.com/)
+[オリジナルアプリ](http://52.199.110.96/)
 
 # テスト用アカウント
  user1 email:b1@gmail.com, password:q123456
