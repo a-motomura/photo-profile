@@ -1,7 +1,14 @@
+.main {
+  height: 150vh;
+  background-color: lightcyan;
+  margin: 0 auto;
+  width: 100%;
+}
 
 .user_nav.grid-6 {
   margin: auto;
 }
+
 .post {
   display: flex;
   justify-content: center;
@@ -14,19 +21,43 @@
   margin: 3% 40%;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.tweet-text {
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.tweet-text2{
+  display: flex;
+  justify-content: center;
+}
+
+.ul-text {
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
 }
 
-.tweet-lists {
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.tweet-contents {
   background-color: #FFF;
+  margin-top: 10px;
+}
+
+.tweet-lists {
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  padding: 10vh 0;
+  padding: 10px 0;
 }
 
 .subtitle {
@@ -42,6 +73,10 @@ a {
   border: 3px solid black;
   background-color: lightgray;
   padding: 0px 50px 45px 50px;
+}
+
+.list {
+  margin-bottom: 40px;
 }
 
 .tweet-name {
