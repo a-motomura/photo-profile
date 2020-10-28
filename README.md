@@ -1,28 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # アプリケーション名	
  photo-profile
 
@@ -111,14 +88,14 @@ Things you may want to cover:
   
  [github](https://github.com/a-motomura/photo-profile)
 
-# 実装予定の機能	洗い出した要件の中から、今後実装予定のものがあれば記述しましょう。
+# 実装予定の機能
   1.プレビュー機能の実装
 
   2.コメントにも写真を投稿出来るようにする。
 
   3.フロント機能を充実させる。
 
-# データベース設計	ER図等を添付しましょう。
+# データベース設計
   [ER図](https://gyazo.com/e67241c981c333424ad735ea34034602)
   
 # ローカルでの動作方法
